@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Book an online therapy session with Rose Therapy. Choose a UK time slot and send your request via WhatsApp with a ready-to-send message." />
+  <title>Book Appointment | Rose Therapy</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Book Appointment | Rose Therapy" />
+  <meta property="og:description" content="Choose a UK time slot, see your local time, and send a ready-to-send WhatsApp booking request." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/booking.js" defer></script>
+
+  <link rel="icon" href="assets/img/rose.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Rose Therapy home">
+        <img src="assets/img/rose.svg" width="28" height="28" alt="" />
+        <span class="brand-name">Rose Therapy</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <div class="header-phone">
+          <span class="muted">WhatsApp:</span>
+          <a class="phone-link js-wa-link"
+             href="https://wa.me/447466024400?text=Hi%20Rose%20Therapy%2C%20I%27d%20like%20to%20book%20an%20online%20session.%0A%0AName%3A%20%0ACountry%3A%20%0APreferred%20date%2Ftime%3A%20%0AType%20of%20session%3A%20Online%20%28English%29%0A"
+             target="_blank" rel="noopener">+44 7466 024400</a>
+        </div>
+        <a class="btn btn-ghost js-wa-link"
+           href="https://wa.me/447466024400?text=Hi%20Rose%20Therapy%2C%20I%27d%20like%20to%20book%20an%20online%20session.%0A%0AName%3A%20%0ACountry%3A%20%0APreferred%20date%2Ftime%3A%20%0AType%20of%20session%3A%20Online%20%28English%29%0A"
+           target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a class="btn btn-primary" href="booking.html">Book a Session</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero-inner reveal">
+        <div>
+          <p class="eyebrow">Online sessions in English • UK & worldwide</p>
+          <h1>Book your appointment</h1>
+          <p class="muted">
+            Choose a preferred <strong>UK time</strong> slot. We’ll show your local time automatically. When you submit,
+            we generate a ready‑to‑send WhatsApp message and open the chat in a new tab.
+          </p>
+        </div>
+
+        <div class="page-hero-card">
+          <div class="sale-price" aria-label="Sale price">
+            <span class="price-was">£400</span>
+            <span class="price-now">£200</span>
+          </div>
+          <p class="urgency">
+            Introductory offer for a short time (may end soon).
+            <span class="tiny muted">Offer subject to change.</span>
+          </p>
+          <p class="tiny muted">Pricing shown is per online session (50 minutes).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="booking-grid">
+          <form id="booking-form" class="form card-surface reveal" novalidate>
+            <h2 class="h3">Your details</h2>
+            <p class="muted">
+              We only use these details to arrange your session. Please keep notes brief—WhatsApp is best for scheduling.
+            </p>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="fullName">Full name <span class="req">*</span></label>
+                <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+                <p class="error" data-error-for="fullName" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <p class="error" data-error-for="email" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g., +44 7..." />
+              </div>
+              <div class="field">
+                <label for="country">Country <span class="req">*</span></label>
+                <input id="country" name="country" type="text" autocomplete="country-name" required />
+                <p class="error" data-error-for="country" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="timezone">Your timezone <span class="req">*</span></label>
+                <input id="timezone" name="timezone" type="text" required />
+                <p class="tiny muted">Pre‑filled automatically. You can edit if needed.</p>
+                <p class="error" data-error-for="timezone" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="topic">Issue / topic <span class="req">*</span></label>
+                <select id="topic" name="topic" required>
+                  <option value="" selected disabled>Select a topic</option>
+                  <option>Anxiety</option>
+                  <option>Depression / low mood</option>
+                  <option>Stress / burnout</option>
+                  <option>Relationship issues</option>
+                  <option>Trauma‑informed support</option>
+                  <option>Grief / loss</option>
+                  <option>Life transitions</option>
+                  <option>Self‑esteem / confidence</option>
+                  <option>Other</option>
+                </select>
+                <p class="error" data-error-for="topic" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="sessionType">Session type <span class="req">*</span></label>
+                <select id="sessionType" name="sessionType" required>
+                  <option value="Online video session (English)" selected>Online video session (English)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Preferred date & time <span class="req">*</span></label>
+                <div class="selected-slot" id="selectedSlot" aria-live="polite">
+                  <span class="muted">Select a date and time on the right.</span>
+                </div>
+                <input type="hidden" id="preferredDate" name="preferredDate" required />
+                <input type="hidden" id="preferredTime" name="preferredTime" required />
+                <p class="error" data-error-for="preferredDate" aria-live="polite"></p>
+                <p class="error" data-error-for="preferredTime" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="notes">Notes (optional)</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Optional: a short note about what you’d like support with."></textarea>
+              <p class="tiny muted">
+                Please avoid sharing highly sensitive information in WhatsApp or web forms.
+              </p>
+            </div>
+
+            <div class="field checkbox">
+              <label>
+                <input id="consentWhatsApp" name="consentWhatsApp" type="checkbox" />
+                I consent to being contacted on WhatsApp.
+              </label>
+              <p class="tiny muted">Recommended so we can confirm your appointment quickly.</p>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Generate WhatsApp request</button>
+              <a class="btn btn-ghost js-wa-link"
+                 href="https://wa.me/447466024400?text=Hi%20Rose%20Therapy%2C%20I%27d%20like%20to%20book%20an%20online%20session.%0A%0AName%3A%20%0ACountry%3A%20%0APreferred%20date%2Ftime%3A%20%0AType%20of%20session%3A%20Online%20%28English%29%0A"
+                 target="_blank" rel="noopener">I’d rather just message</a>
+            </div>
+
+            <div class="form-note">
+              <strong>After you press submit:</strong>
+              <p class="muted">
+                We open WhatsApp in a new tab with your message pre‑filled. You can review, edit, and send.
+              </p>
+            </div>
+          </form>
+
+          <aside class="booking-aside reveal" aria-label="Choose date and time">
+            <div class="card-surface">
+              <h2 class="h3">Choose a time</h2>
+              <p class="muted">Slots shown in <strong>UK time (Europe/London)</strong>.</p>
+
+              <div class="calendar" id="calendar" aria-label="Calendar date picker">
+                <!-- booking.js renders calendar -->
+              </div>
+
+              <div class="time-helper" id="timeHelper" aria-live="polite"></div>
+
+              <div class="timeslots">
+                <h3 class="h4">Available times (UK)</h3>
+                <div id="timeslots" class="timeslot-grid" role="list">
+                  <!-- booking.js renders time buttons -->
+                </div>
+                <p class="tiny muted">
+                  Availability is indicative. We’ll confirm your appointment by WhatsApp.
+                </p>
+              </div>
+            </div>
+
+            <div class="card-surface">
+              <h3 class="h4">What happens after you message us?</h3>
+              <ul class="list">
+                <li>We confirm your time (or suggest alternatives).</li>
+                <li>We share payment details and the video link.</li>
+                <li>You attend your online session in English.</li>
+              </ul>
+              <p class="tiny muted">Not for emergencies. For urgent help, use local emergency services.</p>
+            </div>
+          </aside>
+        </div>
+
+        <section id="waPreview" class="wa-preview card-surface reveal" hidden>
+          <h2 class="h3">Your request is ready to send on WhatsApp.</h2>
+          <p class="muted">
+            We’ve generated a message based on your details. A WhatsApp tab should have opened. You can also copy/reopen below.
+          </p>
+
+          <div class="wa-preview-grid">
+            <div>
+              <h3 class="h4">Message preview</h3>
+              <pre class="pre" id="waMessagePreview"></pre>
+              <div class="cta-row">
+                <a class="btn btn-primary" id="waOpenAgain" target="_blank" rel="noopener">Open WhatsApp again</a>
+                <button class="btn btn-ghost" id="copyMessage" type="button">Copy message</button>
+              </div>
+              <p class="tiny muted" id="copyStatus" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <h3 class="h4">Summary</h3>
+              <div class="summary" id="summaryBox"></div>
+              <p class="tiny muted">
+                Confidentiality matters: for safety, do not send bank details or highly sensitive information on WhatsApp.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <img src="assets/img/rose.svg" width="28" height="28" alt="" />
+          <span class="brand-name">Rose Therapy</span>
+        </a>
+        <p class="muted">
+          Online sessions in English • Clients in the UK and worldwide.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+
+        <div class="footer-crisis">
+          <strong>If you are in immediate danger:</strong>
+          <p class="tiny muted">
+            Call your local emergency number. In the UK: <strong>999</strong> (emergency) or <strong>111</strong> (non‑emergency).
+            Samaritans (UK & ROI): <strong>116 123</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-title">WhatsApp</h3>
+        <p class="muted">
+          Message Rose Therapy: <a class="js-wa-link" target="_blank" rel="noopener"
+          href="https://wa.me/447466024400?text=Hi%20Rose%20Therapy%2C%20I%27d%20like%20to%20book%20an%20online%20session.%0A%0AName%3A%20%0ACountry%3A%20%0APreferred%20date%2Ftime%3A%20%0AType%20of%20session%3A%20Online%20%28English%29%0A">+44 7466 024400</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span class="tiny muted">© <span data-year></span> Rose Therapy.</span>
+      <span class="tiny muted">Booking uses UK time (Europe/London)</span>
+    </div>
+  </footer>
+
+  <a class="wa-fab js-wa-link"
+     href="https://wa.me/447466024400?text=Hi%20Rose%20Therapy%2C%20I%27d%20like%20to%20book%20an%20online%20session.%0A%0AName%3A%20%0ACountry%3A%20%0APreferred%20date%2Ftime%3A%20%0AType%20of%20session%3A%20Online%20%28English%29%0A"
+     target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <img src="assets/img/whatsapp.svg" alt="" width="22" height="22" />
+    <span>WhatsApp</span>
+  </a>
+</body>
+</html>
